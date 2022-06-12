@@ -26,6 +26,11 @@
     color: #292b2c;
 }
 
+
+/* #portfolio ul {
+    list-style-type: circle;
+} */
+
 @media(min-width: 1199px) {
     .port-item {
         padding: 3rem !important;
