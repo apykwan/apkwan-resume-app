@@ -3,7 +3,7 @@ const projectList = [
         name: 'Shop it',
         icon: 'fa-solid fa-cart-shopping',
         link: 'https://apkwan-shopit.herokuapp.com',
-        highlights: ['React.js', 'Bootstrap', 'Redux', 'Node.js', 'MongoDB', 'Search Bar', 'Forget / Reset password', 'Restful APIS', 'Authentication'],
+        highlights: ['React.js', 'Bootstrap', 'Redux', 'Node.js', 'MongoDB', 'Search Bar', 'Forget / Reset password', 'Restful APIs', 'Authentication'],
         description: 'An Imitation of Amazon, users may search the products, add them to the shopping cart and finally make the payment.'
     }, 
     {
@@ -17,14 +17,14 @@ const projectList = [
         name: 'Subscription',
         icon: 'fa-solid fa-dollar-sign',
         link: 'https://apkwan-subscription.firebaseapp.com',
-        highlights: ['React.js', 'Bootstrap', 'Node.js', 'MongoDB', 'Facebook / Gmail Login', 'Forget / Reset password', 'Restful APIS', 'Authentication',, 'Stripe credit card payment'],
+        highlights: ['React.js', 'Bootstrap', 'Node.js', 'MongoDB', 'Facebook / Gmail Login', 'Forget / Reset password', 'Restful APIs', 'Authentication',, 'Stripe credit card payment'],
         description: 'Need monthly advice on stocks? Login with your facebook ID or simply create an account. You may subscribe our services through Stripe.'
     }, 
     {
         name: 'Tour Booking',
         icon: 'fa-solid fa-umbrella-beach',
         link: 'https://apkwan-natours.herokuapp.com',
-        highlights: ['Node.js', 'MongoDB', 'Vanilla Javascript', 'Modeling geospatial data', 'Restful APIS', 'Authentication', 'Stripe credit card payment'],
+        highlights: ['Node.js', 'MongoDB', 'Vanilla Javascript', 'Modeling geospatial data', 'Restful APIs', 'Authentication', 'Stripe credit card payment'],
         description: 'A beautiful travel agency website. Users may login, book tours and checkout.'
     }, 
     {
@@ -32,13 +32,13 @@ const projectList = [
         icon: 'fa-solid fa-shop',
         link: 'https://apkwan-proshop.herokuapp.com',
         highlights: ['React.js', 'Redux', 'Node.js', 'MongoDB', 'Bootstrap', 'Restful APIs', 'Authentication', 'Paypal payment'],
-        description: 'A custom eCommerce, users may register accounts, put their favorite items in the shopping cart and finally made a payment through Paypal.'
+        description: 'Welcome to PropSHop, users may register accounts, put their favorite items in the shopping cart and finally made a payment through Paypal.'
     },
     {
         name: 'The Kepler Missions',
         icon: 'fa-solid fa-rocket',
         link: 'http://3.101.59.254:8000',
-        highlights: ['React.js', 'Node.js', 'MongoDB', 'Docker', 'Restful APIS', 'Authentication', 'AWS deployment'],
+        highlights: ['React.js', 'Node.js', 'MongoDB', 'Docker', 'Restful APIs', 'Authentication', 'AWS deployment'],
         description: 'Discover the "habitable" planets across galaxy and maybe book tour there!!!'
     }, 
     {
@@ -60,13 +60,13 @@ const projectList = [
         icon: 'fa-solid fa-blog',
         link: 'https://apkwan-devconnector.herokuapp.com',
         highlights: ['React.js', 'Redux', 'Node.js', 'MongoDB', 'Restful APIs', 'Authentication'],
-        description: 'Inspired by LinkedIn, users may register accounts and build their own profiles and post comments for the community.'
+        description: 'Users may register accounts and build their own profiles and post comments for the community.'
     },
     {
         name: 'Expensify',
         icon: 'fa-solid fa-receipt',
         link: 'https://apkwan-expensify.herokuapp.com',
-        highlights: ['React.js (class component)', 'Redux', 'SASS', 'Jest testing', 'Restful APIS', 'Gmail login'],
+        highlights: ['React.js (class component)', 'Redux', 'SASS', 'Jest testing', 'Restful APIs', 'Gmail login'],
         description: 'This simple application help to you keep track of day to day spending. You will need a gmail account to login!!'
     }, 
     {

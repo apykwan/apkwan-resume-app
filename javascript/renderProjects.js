@@ -1,10 +1,10 @@
 class Projects {
     constructor(project) {
         this.proj = project;
-        this.creatProject();
+        this.render();
     }
     
-    creatProject() {
+    render() {
         const rootDiv = document.getElementById('projects');
 
         const projectEl = document.createElement('div');

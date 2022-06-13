@@ -26,13 +26,30 @@
     color: #292b2c;
 }
 
-
-/* #portfolio ul {
-    list-style-type: circle;
-} */
-
 @media(min-width: 1199px) {
     .port-item {
         padding: 3rem !important;
+    }
+}
+
+#mySkills {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-row-gap: 2.4rem;
+}
+
+@media(max-width: 1199px) {
+    #mySkills {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-row-gap: 2rem;
+    }
+}
+
+@media(max-width: 800px) {
+    #mySkills {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-row-gap: 1rem;
     }
 }

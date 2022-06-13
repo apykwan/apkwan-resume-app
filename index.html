@@ -71,7 +71,7 @@
         <div id="home" class="collapse show">
             <div class="card card-body bg-dark text-white py-5">
                 <h2>Welcome To My Page</h2>
-                <p>"Never Stop Learning Because Life Never Stops Teaching" - Kirill Korshikov</p>
+                <p>“For the things we have to learn before we can do them, we learn by doing them.” — Aristotle</p>
             </div>
 
             <div class="card p-5 my-3 d-flex">
@@ -79,39 +79,8 @@
                 <p>With extensive learning and delivering user-centric applications, <br>
                     I look forward to leveraging my abilities and qualifications to meet your needs.</p>
                 <hr>
-                <div class="container text-center text-md-left">
-                    <div class="row">
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-html5 mr-2"></i>HTML</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-css3 mr-2"></i>CSS</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-bootstrap mr-2"></i>Bootstrap</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-brands fa-sass mr-2"></i>SASS</h4>
-                    </div>
-                    <div class="row">
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-js mr-2"></i>Javascript</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-react mr-2"></i>React.js / Native</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fas fa-code mr-2"></i>Redux</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-solid fa-t mr-2"></i>TypeScript</h4>
-                    </div>
-
-                    <div class="row">
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-node-js mr-2"></i>Node.js</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-mdb mr-2"></i>MongoDB</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-solid fa-n mr-2"></i>Nginx</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-docker mr-2"></i>Docker</h4>   
-                    </div>
-                    <div class="row">
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-solid fa-dharmachakra mr-2"></i>Kubernetes</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-linux mr-2"></i>Linux</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-brands fa-github mr-2"></i>Github</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fab fa-digital-ocean mr-2"></i>DigitalOcean</h4>
-                        
-                    </div>
-                    <div class="row">
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-brands fa-stripe mr-2"></i>Stripe</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-solid fa-route mr-2"></i>RESTful API</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-solid fa-sitemap mr-2"></i>MVC Architecture</h4>
-                        <h4 class="p-2 col-lg-3 col-sm-6"><i class="fa-solid fa-mobile-screen-button mr-2"></i>Mobile Friendly</h4>
-                    </div>
+                <div id="mySkills" class="container text-center text-md-left">
+                    <!-- Insert from renderSkills.js -->
                 </div>
             </div>
         </div>
@@ -123,7 +92,7 @@
                 <p class="d-2">Here are samples of the applications that I have been working on.</p>
             </div>
             <div id="projects" class="card-columns my-3">
-                <!-- Insert from javascript -->
+                <!-- Insert from renderProjects.js -->
             </div>
             
         </div>
@@ -172,10 +141,17 @@
         <!-- FOOTER -->
         <footer id="main-footer" class="p-5 bg-dark text-white">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <a href="file/andykwanResume.pdf" target="_blank" class="btn btn-outline-light" download>
                         <i class="fas fa-cloud mr-2"></i> Download Resume
                     </a>
+                </div>
+                <div class="col-md-4">
+                    <p class="lead text-center">
+                        Copyright &copy;
+                        <span id="year"></span>
+                        Apkwan
+                    </p>
                 </div>
             </div>
         </footer>
@@ -190,6 +166,8 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script src="javascript/skillList.js"></script>
+    <script src="javascript/renderSkills.js"></script>
     <script src="javascript/projectList.js"></script>
     <script src="javascript/renderProjects.js"></script>
     <script src="javascript/sendMail.js"></script>
