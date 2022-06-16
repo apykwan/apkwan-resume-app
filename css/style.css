@@ -38,14 +38,15 @@
     grid-row-gap: 2.4rem;
 }
 
-#projects {
-    display: grid !important;
-    grid-template-columns: 32% 32% 32% !important;
+/* #projects {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
     grid-column-gap: 2%;
-}
+} */
 
 @media(max-width: 1199px) {
     #mySkills, #projects {
+        display: grid;
         grid-template-columns: 50% 50%;
         grid-row-gap: 2rem;
     }
@@ -53,6 +54,7 @@
 
 @media(max-width: 800px) {
     #mySkills, #projects {
+        display: grid;
         grid-template-columns: 100%;
         grid-row-gap: 1rem;
     }
