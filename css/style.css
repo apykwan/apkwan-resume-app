@@ -33,15 +33,15 @@
 }
 
 #mySkills {
-    display: grid;
+    display: grid; 
     grid-template-columns: 25% 25% 25% 25%;
     grid-row-gap: 2.4rem;
 }
 
 #projects {
-    display: grid;
-    grid-template-columns: 32% 32% 32%;
-  
+    display: grid !important;
+    grid-template-columns: 32% 32% 32% !important;
+    grid-column-gap: 2%;
 }
 
 @media(max-width: 1199px) {
