@@ -47,15 +47,23 @@
 @media(max-width: 1199px) {
     #mySkills, #projects {
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-row-gap: 2rem;
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
     }
+
+    #mySkills {
+        grid-row-gap: 1.5rem;
+    }
+    
 }
 
 @media(max-width: 800px) {
     #mySkills, #projects {
         display: grid;
         grid-template-columns: 100%;
+    }
+
+    #mySkills {
         grid-row-gap: 1rem;
     }
 }
