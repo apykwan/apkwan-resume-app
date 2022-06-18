@@ -15,20 +15,19 @@
 </head>
 
 <body>
-    <!-- START HERE-->
     <div class="container">
         <header id="main-header">
             <div class="row no-gutters">
                 <div class="col-lg-12 col-md-10">
                     <div class="d-flex flex-column">
                         <div class="p-4 text-dark">
-                            <div class="row d-flex flex-row justify-content-between align-items-center">
+                            <div class="row d-flex flex-row justify-content-between align-items-center text-center text-lg-left">
                                 <div class="col-md-7 col-12">
                                     <h1 class="display-4">ANDY KWAN</h1>
                                 </div>
                                 <div class="col-md-5 col-12 d-flex flex-column">    
-                                    <h5 class="d-none d-lg-block p-1">
-                                        <i class="fab fa-github mr-2"></i>
+                                    <h5 class="d-none d-md-block p-1">
+                                        <i class="fab fa-github mr-2 d-none d-lg-inlin"></i>
                                         <a class="myEmail" href="https://github.com/apykwan" target="_blank" class="text-dark"">
                                             https://github.com/apykwan
                                         </a>
@@ -44,10 +43,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex text-white align-items-stretch text-center">
+                        <!-- Collapsible Menu for Large Screen Only -->
+                        <div class="d-none d-lg-flex text-white align-items-stretch text-center">
                             <div class="port-item collapsible p-4 bg-dark" data-toggle="collapse" data-target="#home">
-                                <i class="fas fa-home d-block"></i>
-                                <span class="d-none d-sm-block">Home</span>
+                                <i class="fa-solid fa-toolbox"></i>
+                                <span class="d-none d-sm-block">Skills</span>
                             </div>
                             <div class="port-item collapsible p-4 bg-light text-dark" data-toggle="collapse"
                                 data-target="#portfolio">
@@ -67,46 +67,96 @@
             </div>
         </header>
 
+        <!-- ACCORDION -->
+        <!-- MENU FOR MD SCREEN AND BELOW -->
+        <div id="accordion" class="d-lg-none mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                            <i class="fa-solid fa-toolbox mr-2"></i> Skills
+                        </div>
+                    </h5>
+                </div>
+                <div id="collapse1" class="collapse show">
+                    <div class="p-3 d-flex collapse">
+                        <div id="accordionSkills" class="container text-center mt-2">
+                            <!-- Insert from renderSkills.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                            <i class="fas fa-folder-open mr-2"></i> Portfolio
+                        </div>
+                    </h5>
+                </div>
+                <div id="collapse2" class="collapse">
+                    <div class="p-3 d-flex flex-column collapse">
+                        <div id="accordionProjects">
+                            <!-- Insert from renderProjects.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <div href="#contact" data-toggle="collapse" data-parent="#accordion">
+                            <i class="fas fa-envelope mr-2"></i> Contact
+                        </div>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
         <!-- HOME -->
         <div id="home" class="collapse show">
-            <div class="card card-body bg-dark text-white py-5">
-                <h2>Welcome To My Page</h2>
-                <p>“For the things we have to learn before we can do them, we learn by doing them.” — Aristotle</p>
-            </div>
-
-            <div class="card p-5 my-3 d-flex">
-                <h3 class="mb-4">My Skills</h3>
-                <p>With extensive learning and delivering user-centric applications, <br>
-                    I look forward to leveraging my abilities and qualifications to meet your needs.</p>
-                <hr>
-                <div id="mySkills" class="container text-center text-md-left">
-                    <!-- Insert from renderSkills.js -->
+            <div class="d-none d-lg-block">
+                <div class="card card-body bg-dark text-white py-5 collapsible">
+                    <h2>Welcome To My Page</h2>
+                    <p>“For the things we have to learn before we can do them, we learn by doing them.” — Aristotle</p>
+                </div>
+                
+                <div class="card p-5 my-3 d-flex">
+                    <p>
+                        With extensive learning and delivering user-centric applications, <br>
+                        I look forward to leveraging my abilities and qualifications to meet your needs.
+                    </p>
+                    <hr>
+                    <div id="mySkills" class="container text-center text-md-left mt-3">
+                        <!-- Insert from renderSkills.js -->
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- PORTFOLIO -->
         <div id="portfolio" class="collapse">
-            <div class="card card-body bg-light text-dark py-5">
-                <h2>Portfolio</h2>
-                <p class="d-2">Here are samples of the applications that I have been working on.</p>
+            <div class="d-none d-lg-block">
+                <div class="card card-body bg-light text-dark py-5">
+                    <h2>Portfolio</h2>
+                    <p class="d-2">Here are samples of the applications that I have been working on.</p>
+                </div>
+                <div id="projects" class="card-columns my-3">
+                    <!-- Insert from renderProjects.js -->
+                </div>
             </div>
-            <div id="projects" class="card-columns my-3">
-                <!-- Insert from renderProjects.js -->
-            </div>
-            
         </div>
     
         <!-- CONTACT -->
         <div id="contact" class="collapse">
-            <div class="card card-body bg-info text-white py-5">
+            <div class="card card-body bg-info text-white py-5 d-none d-lg-block">
                 <h2>Contact</h2>
                 <p class="lead">
                     I'm always happy and eager to receive your feedback.
                 </p>
             </div>
             <div class="mt-4">
-                <h3 class="mb-2 text-info">Get In Touch</h3>
+                <h3 class="mb-2 text-info d-none d-lg-block">Get In Touch</h3>
                 <form id="javascript_form">
                     <div class="form-group">
                         <div class="input-group input-group-lg">
@@ -131,8 +181,10 @@
                         </div>
                     </div>
                     <input type="submit" id="js_send" value="Submit" class="btn btn-info btn-block btn-lg">
-                    <p class="text-sm-right mt-2 text-muted">Powered by <a href="https://postmail.invotes.com"
-                            target="_blank">PostMail</a></p>
+                    <p class="text-sm-right mt-2 text-muted">
+                        Powered by 
+                        <a href="https://postmail.invotes.com" target="_blank">PostMail</a>
+                    </p>
                 </form>
             </div>
         </div>
@@ -170,19 +222,7 @@
     <script src="javascript/projectList.js"></script>
     <script src="javascript/renderProjects.js"></script>
     <script src="javascript/sendMail.js"></script>
-    <script>
-        // Get the current year for the copyright
-        $('#year').text(new Date().getFullYear());
-
-        $('.collapsible').click(function () {
-            $('.collapse').collapse('hide');
-        });
-
-        $(document).on('click', '[data-toggle="lightbox"]', function (e) {
-            e.preventDefault();
-            $(this).ekkoLightbox();
-        });
-    </script>
+    <script src="javascript/core.js"></script>
 </body>
 
 </html>

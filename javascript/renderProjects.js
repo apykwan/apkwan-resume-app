@@ -1,15 +1,14 @@
 class Projects {
-    constructor(project) {
+    constructor(project, root) {
         this.proj = project;
+        this.rootDiv = document.getElementById(root);
         this.render();
     }
     
     render() {
-        const rootDiv = document.getElementById('projects');
-
         const projectEl = document.createElement('div');
         projectEl.classList.add('card', 'rounded-3', 'shadow-sm', 'mb-3');
-        rootDiv.append(projectEl);
+        this.rootDiv.append(projectEl);
 
         // create card body
         const projectBodyEl = document.createElement('div');
@@ -62,8 +61,10 @@ class Projects {
         footer.textContent = this.proj.description;
         projectFooterEl.append(footer);
         projectBodyEl.append(projectFooterEl);
-
     }
 }
+// Collapsible Menu
+projectList.forEach(proj => new Projects(proj, 'projects'));
 
-projectList.forEach(proj => new Projects(proj));
+// Accordion Menu
+projectList.forEach(proj => new Projects(proj, 'accordionProjects'));

@@ -1,12 +1,11 @@
 class Skills {
-    constructor(skills) {
+    constructor(skills, root) {
         this.skills = skills;
+        this.rootDiv = document.getElementById(root);
         this.render();
     }
 
     render() {
-        const rootDiv = document.getElementById('mySkills');
-
         // create h4 element
         const h4El = document.createElement('h4');
         h4El.textContent = this.skills.name;
@@ -15,8 +14,12 @@ class Skills {
         icon.className = `${this.skills.icon} mr-2`;
         h4El.insertAdjacentElement('afterbegin', icon);
 
-        rootDiv.append(h4El);
+        this.rootDiv.append(h4El);
     }
 }
 
-skillList.forEach(skill => new Skills(skill));
+// Collapsible Menu
+skillList.forEach(skill => new Skills(skill, 'mySkills'));
+
+// Accordion Menu
+skillList.forEach(skill => new Skills(skill, 'accordionSkills'));

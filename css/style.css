@@ -26,6 +26,12 @@
     color: #292b2c;
 }
 
+@media(min-width: 992px) {
+    .port-item {
+        padding: 2.2rem !important;
+    }
+}
+
 @media(min-width: 1199px) {
     .port-item {
         padding: 3rem !important;
@@ -54,7 +60,6 @@
     #mySkills {
         grid-row-gap: 1.5rem;
     }
-    
 }
 
 @media(max-width: 800px) {
