@@ -29,11 +29,13 @@ class Skills {
 const renderSkills = () => {
     if (window.innerWidth > 992) {
         // Collapsible Menu
-        Skills.clearOtherRoot('accordionSkills')
+        Skills.clearOtherRoot('accordionSkills');
+        Skills.clearOtherRoot('mySkills');
         skillList.forEach(skill => new Skills(skill, 'mySkills'));
     } else {
         // Accordion Menu
-        Skills.clearOtherRoot('mySkills')
+        Skills.clearOtherRoot('mySkills');
+        Skills.clearOtherRoot('accordionSkills');
         skillList.forEach(skill => new Skills(skill, 'accordionSkills'));
     }
 };

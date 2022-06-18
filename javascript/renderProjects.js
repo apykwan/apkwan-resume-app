@@ -75,11 +75,13 @@ class Projects {
 const renderProjects = () => {
     if (window.innerWidth > 992) {
         // Collapsible Menu
-        Projects.clearOtherRoot('accordionProjects')
+        Projects.clearOtherRoot('accordionProjects');
+        Projects.clearOtherRoot('projects');
         projectList.forEach(proj => new Projects(proj, 'projects'));
     } else {
         // Accordion Menu
-        Projects.clearOtherRoot('projects')
+        Projects.clearOtherRoot('projects');
+        Projects.clearOtherRoot('accordionProjects');
         projectList.forEach(proj => new Projects(proj, 'accordionProjects'));
     }
 };
