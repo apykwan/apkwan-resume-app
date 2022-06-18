@@ -1,4 +1,11 @@
 class Projects {
+    static clearOtherRoot(rootId) {
+        const otherRoot = document.getElementById(rootId);
+        while(otherRoot.firstChild) {
+            otherRoot.removeChild(otherRoot.firstChild);
+        }
+    }
+
     constructor(project, root) {
         this.proj = project;
         this.rootDiv = document.getElementById(root);
@@ -63,8 +70,19 @@ class Projects {
         projectBodyEl.append(projectFooterEl);
     }
 }
-// Collapsible Menu
-projectList.forEach(proj => new Projects(proj, 'projects'));
 
-// Accordion Menu
-projectList.forEach(proj => new Projects(proj, 'accordionProjects'));
+// Toggle between large and smaller screens
+const renderProjects = () => {
+    if (window.innerWidth > 992) {
+        // Collapsible Menu
+        Projects.clearOtherRoot('accordionProjects')
+        projectList.forEach(proj => new Projects(proj, 'projects'));
+    } else {
+        // Accordion Menu
+        Projects.clearOtherRoot('projects')
+        projectList.forEach(proj => new Projects(proj, 'accordionProjects'));
+    }
+};
+
+renderProjects();
+window.addEventListener('resize', renderProjects);

@@ -81,6 +81,6 @@ const projectList = [
         icon: 'fa-solid fa-table-tennis-paddle-ball',
         link: 'https://apkwan-pong.herokuapp.com',
         highlights: ['Vanilla Javascript', 'Socket.IO', 'Node.js', 'HTML Canvas'],
-        description: '**** To play this nostalgic game, you will need two players on separate browsers. ***'
+        description: '**** To play this nostalgic game, you will need two players on separate browsers.'
     },
 ];

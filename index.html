@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="col-md-5 col-12 d-flex flex-column">    
                                     <h5 class="d-none d-md-block p-1">
-                                        <i class="fab fa-github mr-2 d-none d-lg-inlin"></i>
+                                        <i class="fab fa-github mr-2 d-none d-lg-inline"></i>
                                         <a class="myEmail" href="https://github.com/apykwan" target="_blank" class="text-dark"">
                                             https://github.com/apykwan
                                         </a>
@@ -43,6 +43,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Collapsible Menu for Large Screen Only -->
                         <div class="d-none d-lg-flex text-white align-items-stretch text-center">
                             <div class="port-item collapsible p-4 bg-dark" data-toggle="collapse" data-target="#home">
@@ -62,62 +63,60 @@
                             <div class="d-none d-md-block port-item hide-cursor p-4">
                             </div>
                         </div>
+
+                        <!-- ACCORDION -->
+                        <!-- MENU FOR MD SCREEN AND BELOW -->
+                        <div id="accordion" class="d-lg-none mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                                            <i class="fa-solid fa-toolbox mr-2"></i> Skills
+                                        </div>
+                                    </h5>
+                                </div>
+                                <div id="collapse1" class="collapse">
+                                    <div class="p-3 d-flex collapse">
+                                        <div id="accordionSkills" class="container text-center mt-2">
+                                            <!-- Insert from renderSkills.js -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                                            <i class="fas fa-folder-open mr-2"></i> Portfolio
+                                        </div>
+                                    </h5>
+                                </div>
+                                <div id="collapse2" class="collapse show">
+                                    <div class="p-3 d-flex flex-column collapse">
+                                        <div id="accordionProjects">
+                                            <!-- Insert from renderProjects.js -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- ACCORDION -->
-        <!-- MENU FOR MD SCREEN AND BELOW -->
-        <div id="accordion" class="d-lg-none mb-4">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">
-                        <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
-                            <i class="fa-solid fa-toolbox mr-2"></i> Skills
-                        </div>
-                    </h5>
-                </div>
-                <div id="collapse1" class="collapse">
-                    <div class="p-3 d-flex collapse">
-                        <div id="accordionSkills" class="container text-center mt-2">
-                            <!-- Insert from renderSkills.js -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">
-                        <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
-                            <i class="fas fa-folder-open mr-2"></i> Portfolio
-                        </div>
-                    </h5>
-                </div>
-                <div id="collapse2" class="collapse show">
-                    <div class="p-3 d-flex flex-column collapse">
-                        <div id="accordionProjects">
-                            <!-- Insert from renderProjects.js -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <!-- HOME -->
         <div id="home" class="collapse">
             <div class="d-none d-lg-block">
                 <div class="card card-body bg-dark text-white py-5 collapsible">
-                    <h2>Welcome To My Page</h2>
-                    <p>“For the things we have to learn before we can do them, we learn by doing them.” — Aristotle</p>
+                    <h2>Skills</h2>
+                    <p class="lead">“When love and skill work together, expect a masterpiece.” — John Ruskin</p>
                 </div>
                 
                 <div class="card p-5 my-3 d-flex">
-                    <p>
-                        With extensive learning and delivering user-centric applications, <br>
-                        I look forward to leveraging my abilities and qualifications to meet your needs.
-                    </p>
-                    <hr>
                     <div id="mySkills" class="container text-center text-md-left mt-3">
                         <!-- Insert from renderSkills.js -->
                     </div>
@@ -130,7 +129,7 @@
             <div class="d-none d-lg-block">
                 <div class="card card-body bg-light text-dark py-5">
                     <h2>Portfolio</h2>
-                    <p class="d-2">Here are samples of the applications that I have been working on.</p>
+                    <p class="lead">“For the things we have to learn before we can do them, we learn by doing them.” — Aristotle</p>
                 </div>
                 <div id="projects" class="card-columns my-3">
                     <!-- Insert from renderProjects.js -->
@@ -143,12 +142,10 @@
             <div class="d-none d-lg-block">
                 <div class="card card-body bg-info text-white py-5">
                     <h2>Contact</h2>
-                    <p class="lead">
-                        I'm always happy and eager to receive your feedback.
-                    </p>
+                    <p class="lead">“We all need people who will give us feedback. That’s how we improve.” — Bill Gates</p>
                 </div>
                 <div class="mt-4">
-                    <h3 class="mb-2 text-info">Get In Touch</h3>
+                    
                     <form id="javascript_form">
                         <div class="form-group">
                             <div class="input-group input-group-lg">
