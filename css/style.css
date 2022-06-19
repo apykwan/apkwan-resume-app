@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+#skills .card {
+    border: none !important;
+}
+
 .bg-black {
     color: #fff;
     background: #000;
