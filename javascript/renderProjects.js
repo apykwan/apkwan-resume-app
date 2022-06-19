@@ -14,7 +14,7 @@ class Projects {
     
     render() {
         const projectEl = document.createElement('div');
-        projectEl.classList.add('card', 'rounded-3', 'shadow-sm', 'mb-3');
+        projectEl.classList.add('card', 'rounded-3', 'shadow-sm', 'mb-3', 'bg-light');
         this.rootDiv.append(projectEl);
 
         // create card body
@@ -34,7 +34,7 @@ class Projects {
         
         // create project link
         const projLinkEl =  document.createElement('p');
-        projLinkEl.classList.add('p-2', 'mb-3', 'bg-dark', 'text-white');
+        projLinkEl.classList.add('p-2', 'mb-3', 'bg-dark');
         const projLink = document.createElement('a');
         projLink.className = ('text-white');
         projLink.setAttribute('href', this.proj.link);
@@ -62,7 +62,7 @@ class Projects {
 
         // create card footer
         const projectFooterEl = document.createElement('div');
-        projectFooterEl.classList.add('card-footer');
+        projectFooterEl.classList.add('card-footer', 'bg-light');
         const footer =  document.createElement('p');
         footer.classList.add('text-lead');
         footer.textContent = this.proj.description;
