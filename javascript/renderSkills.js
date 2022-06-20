@@ -7,14 +7,19 @@ class Skills {
     }
 
     constructor(skills, root) {
+        this.id = skills.name;
         this.skills = skills;
         this.rootDiv = document.getElementById(root);
         this.render();
+        this.draggable();
     }
 
     render() {
         // create h4 element
         const h4El = document.createElement('h4');
+        h4El.setAttribute('draggable', true);
+        h4El.setAttribute('id', this.id);
+        h4El.classList = 'skill p-1';
         h4El.textContent = this.skills.name;
         // create icon 
         const icon = document.createElement('i');
@@ -22,6 +27,19 @@ class Skills {
         h4El.insertAdjacentElement('afterbegin', icon);
 
         this.rootDiv.append(h4El);
+    }
+
+    draggable() {
+        document.getElementById(this.id).addEventListener('dragstart', event => {
+            event.dataTransfer.setData('text/plain', this.id);			
+            event.dataTransfer.effectAllowed = 'move';
+            document.getElementById(this.id).classList.add('droppable');
+        });
+
+        document.getElementById(this.id).addEventListener('dragend', event => {
+            document.getElementById(this.id).classList.remove('droppable');			
+           
+        });
     }
 }
 
@@ -40,5 +58,50 @@ const renderSkills = () => {
     }
 };
 
+// Skills drag and drop
+const dragAndDrop = () => {
+    const skills = document.querySelectorAll('.skill');
+    skills.forEach(skill => {
+        skill.addEventListener('dragenter', event => {
+            if (event.dataTransfer.types[0] === 'text/plain') {						
+                event.preventDefault();
+            event.target.classList.add('over');			
+            }						
+        });
+
+        skill.addEventListener('dragleave', event => {								
+            event.target.classList.remove('over');
+        });
+
+        skill.addEventListener('dragover', event => {								
+            event.preventDefault();
+            return false;
+        });
+
+        skill.addEventListener('drop', event => {
+            event.stopPropagation(); // stops the browser from redirecting.
+
+            console.log(event.target);
+
+            const skillId = event.dataTransfer.getData('text/plain');
+            let draggable = document.getElementById(skillId);
+
+            let target = null;
+            if (draggable === skill) return;
+            target = skill.innerHTML;
+
+            skill.innerHTML = draggable.innerHTML;
+            draggable.innerHTML = target;
+
+            event.target.classList.remove('over');
+        });
+    });
+};
+
 renderSkills();
-window.addEventListener('resize', renderSkills);
+dragAndDrop();
+
+window.addEventListener('resize', event => {
+    renderSkills();
+    dragAndDrop();
+});

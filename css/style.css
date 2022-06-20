@@ -88,3 +88,15 @@ body {
         grid-row-gap: 1rem;
     }
 }
+/** DRAGGBLE*/
+.droppable {
+    opacity: 0.4;
+}
+
+.over {
+    border: 2px dotted #17a2b8;
+}
+
+.skill {
+    cursor: move;
+}
