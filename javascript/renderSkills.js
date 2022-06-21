@@ -60,8 +60,7 @@ const renderSkills = () => {
 
 // Skills drag and drop
 const dragAndDrop = () => {
-    const skills = document.querySelectorAll('.skill');
-    skills.forEach(skill => {
+    document.querySelectorAll('.skill').forEach(skill => {
         skill.addEventListener('dragenter', event => {
             if (event.dataTransfer.types[0] === 'text/plain') {						
                 event.preventDefault();
@@ -79,17 +78,17 @@ const dragAndDrop = () => {
         });
 
         skill.addEventListener('drop', event => {
-            event.stopPropagation(); // stops the browser from redirecting.
-
-            console.log(event.target);
+            // stops the browser from redirecting.
+            event.stopPropagation();        
 
             const skillId = event.dataTransfer.getData('text/plain');
             let draggable = document.getElementById(skillId);
 
             let target = null;
             if (draggable === skill) return;
-            target = skill.innerHTML;
 
+            // exchange innerHTML with target element
+            target = skill.innerHTML;
             skill.innerHTML = draggable.innerHTML;
             draggable.innerHTML = target;
 

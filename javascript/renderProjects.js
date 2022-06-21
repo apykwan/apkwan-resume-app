@@ -24,7 +24,7 @@ class Projects {
 
         // create card body h4
         const bodyH4 = document.createElement('h4');
-        bodyH4.classList.add('card-title', 'mb-3');
+        bodyH4.classList.add('card-title', 'mb-3', 'text-center', 'text-lg-left');
         bodyH4.textContent = this.proj.name;
         // create icon for h4
         const h4Icon = document.createElement('i');
