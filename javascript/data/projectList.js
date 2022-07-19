@@ -1,4 +1,4 @@
-const projectList = [
+export const projectList = [
     {
         name: 'Shop it',
         icon: 'fa-solid fa-cart-shopping',

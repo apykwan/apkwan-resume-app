@@ -1,4 +1,4 @@
- const skillList = [
+ export const skillList = [
     { icon: "fab fa-html5", name: "HTML" },
     { icon: "fab fa-css3", name: "CSS" },
     { icon: "fab fa-bootstrap", name: "Bootstrap" },
@@ -7,6 +7,7 @@
     { icon: "fab fa-react", name: "React.js / Native" },
     { icon: "fas fa-code", name: "Redux" },
     { icon: "fa-solid fa-t", name: "TypeScript" },
+    { icon: "fa-solid fa-vial", name: "Jest" },
     { icon: "fab fa-node-js", name: "Node.js" },
     { icon: "fab fa-mdb", name: "MongoDB" },
     { icon: "fa-solid fa-n", name: "Nginx" },

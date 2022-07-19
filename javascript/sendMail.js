@@ -15,9 +15,9 @@ function js_onError(error) {
      window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
 }
 
-const sendButton = document.getElementById("js_send");
+export const sendButton = document.getElementById("js_send");
 
-function js_send() {
+export function js_send() {
     sendButton.value = 'Sending…';
     sendButton.disabled = true;
         
@@ -51,8 +51,6 @@ function js_send() {
     return false;
 }
 
-sendButton.onclick = js_send;
-
 function toParams(data_js) {
     const form_data = [];
     for (let key in data_js ) {
@@ -62,7 +60,9 @@ function toParams(data_js) {
     return form_data.join("&");
 }
 
-const js_form = document.getElementById(form_id_js);
-js_form.addEventListener("submit", function (e) {
-    e.preventDefault();   
-});
+export const js_form = document.getElementById(form_id_js);
+
+// sendButton.onclick = js_send;
+// js_form.addEventListener("submit", function (e) {
+//     e.preventDefault();   
+// });

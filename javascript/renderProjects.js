@@ -1,3 +1,5 @@
+import { projectList } from './data/projectList.js';
+
 class Projects {
     static clearOtherRoot(rootId) {
         const otherRoot = document.getElementById(rootId);
@@ -72,7 +74,7 @@ class Projects {
 }
 
 // Toggle between large and smaller screens
-const renderProjects = () => {
+export const renderProjects = () => {
     if (window.innerWidth > 992) {
         // Collapsible Menu
         Projects.clearOtherRoot('accordionProjects');
@@ -85,6 +87,3 @@ const renderProjects = () => {
         projectList.forEach(proj => new Projects(proj, 'accordionProjects'));
     }
 };
-
-renderProjects();
-window.addEventListener('resize', renderProjects);

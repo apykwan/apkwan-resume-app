@@ -1,3 +1,5 @@
+import { skillList } from './data/skillList.js';
+
 class Skills {
     static clearOtherRoot(rootId) {
         const otherRoot = document.getElementById(rootId);
@@ -44,7 +46,7 @@ class Skills {
 }
 
 // Toggle between large and smaller screens
-const renderSkills = () => {
+export const renderSkills = () => {
     if (window.innerWidth > 992) {
         // Collapsible Menu
         Skills.clearOtherRoot('accordionSkills');
@@ -59,7 +61,7 @@ const renderSkills = () => {
 };
 
 // Skills drag and drop
-const dragAndDrop = () => {
+export const dragAndDrop = () => {
     document.querySelectorAll('.skill').forEach(skill => {
         skill.addEventListener('dragenter', event => {
             if (event.dataTransfer.types[0] === 'text/plain') {						
@@ -96,11 +98,3 @@ const dragAndDrop = () => {
         });
     });
 };
-
-renderSkills();
-dragAndDrop();
-
-window.addEventListener('resize', event => {
-    renderSkills();
-    dragAndDrop();
-});
