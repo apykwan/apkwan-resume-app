@@ -3,7 +3,7 @@ import { renderSkills, dragAndDrop } from './renderSkills.js';
 import { sendButton, js_send, js_form } from './sendMail.js';
 
 /**
- *  Portfolio Section
+ *  PORFOLIO SECTION
  */
 // Render project list
 renderProjects();
@@ -11,8 +11,20 @@ renderProjects();
 // Re-render when screen resized
 window.addEventListener('resize', renderProjects);
 
+// Accordion arrow toggle
+const cardAccordions = document.querySelectorAll('.card-accordion');
+for (let i = 0; i < cardAccordions.length; i++) {
+    const imageEl = cardAccordions[i].firstElementChild.firstElementChild.firstElementChild.lastElementChild.lastElementChild.classList;
+    const targetDiv = cardAccordions[i].lastElementChild.classList;
+
+    targetDiv.contains('show') ? imageEl.add('arrow-rotate') : imageEl.remove('arrow-rotate');
+    cardAccordions[i].addEventListener('click', () => {
+        imageEl.toggle('arrow-rotate');
+    });
+}
+
 /**
- *  Skills Section
+ *  SKILLS SECTION
  */
 // Render skill list
 renderSkills();
@@ -25,9 +37,8 @@ window.addEventListener('resize', event => {
 });
 
 /**
- *  Contact Section
+ *  CONTACT SECTION
  */
-
 // Render Contact section
 sendButton.onclick = js_send;
 js_form.addEventListener("submit", function (e) {
@@ -35,7 +46,7 @@ js_form.addEventListener("submit", function (e) {
 });
 
 /**
- *  Footer Section
+ *  FOOTER SECTION
  */
 // Get the current year for the copyright
 $('#year').text(new Date().getFullYear());

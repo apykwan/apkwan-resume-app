@@ -60,12 +60,6 @@ body {
     grid-row-gap: 2.4rem;
 }
 
-/* #projects {
-    display: grid;
-    grid-template-columns: 32% 32% 32%;
-    grid-column-gap: 2%;
-} */
-
 @media(max-width: 1199px) {
     #mySkills, #projects {
         display: grid;
@@ -88,7 +82,14 @@ body {
         grid-row-gap: 1rem;
     }
 }
-/** DRAGGBLE*/
+
+/** ACCORDION */
+.arrow-rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s linear 0.025s;
+}
+
+/** DRAGGBLE */
 .droppable {
     opacity: 0.4;
 }
