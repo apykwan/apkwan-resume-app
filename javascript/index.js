@@ -18,9 +18,9 @@ export function AccordionArrowToggle() {
         const imageEl = cardAccordions[i].firstElementChild.firstElementChild.firstElementChild.lastElementChild.lastElementChild.classList;
         const targetDiv = cardAccordions[i].lastElementChild.classList;
 
-        targetDiv.contains('show') ? imageEl.add('arrow-rotate') : imageEl.remove('arrow-rotate');
+        if ( targetDiv.contains('show')) imageEl.add('arrow-rotate');
         cardAccordions[i].addEventListener('click', () => {
-            imageEl.toggle('arrow-rotate');
+            targetDiv.contains('show') ? imageEl.add('arrow-rotate') : imageEl.remove('arrow-rotate');
         });
     }
 }
