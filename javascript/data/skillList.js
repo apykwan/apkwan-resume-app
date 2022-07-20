@@ -6,7 +6,7 @@
     { icon: "fab fa-js", name: "JavaScript" },
     { icon: "fab fa-react", name: "React.js / Native" },
     { icon: "fas fa-code", name: "Redux" },
-    { icon: "fa-solid fa-vial", name: "Jest" },
+    { icon: "fa-solid fa-flask-vial", name: "Jest" },
     { icon: "fa-solid fa-t", name: "TypeScript" },
     { icon: "fab fa-node-js", name: "Node.js" },
     { icon: "fab fa-mdb", name: "MongoDB" },

@@ -12,16 +12,19 @@ renderProjects();
 window.addEventListener('resize', renderProjects);
 
 // Accordion arrow toggle
-const cardAccordions = document.querySelectorAll('.card-accordion');
-for (let i = 0; i < cardAccordions.length; i++) {
-    const imageEl = cardAccordions[i].firstElementChild.firstElementChild.firstElementChild.lastElementChild.lastElementChild.classList;
-    const targetDiv = cardAccordions[i].lastElementChild.classList;
+export function AccordionArrowToggle() {
+    const cardAccordions = document.querySelectorAll('.card-accordion');
+    for (let i = 0; i < cardAccordions.length; i++) {
+        const imageEl = cardAccordions[i].firstElementChild.firstElementChild.firstElementChild.lastElementChild.lastElementChild.classList;
+        const targetDiv = cardAccordions[i].lastElementChild.classList;
 
-    targetDiv.contains('show') ? imageEl.add('arrow-rotate') : imageEl.remove('arrow-rotate');
-    cardAccordions[i].addEventListener('click', () => {
-        imageEl.toggle('arrow-rotate');
-    });
+        targetDiv.contains('show') ? imageEl.add('arrow-rotate') : imageEl.remove('arrow-rotate');
+        cardAccordions[i].addEventListener('click', () => {
+            imageEl.toggle('arrow-rotate');
+        });
+    }
 }
+AccordionArrowToggle();
 
 /**
  *  SKILLS SECTION

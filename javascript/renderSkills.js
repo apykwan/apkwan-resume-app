@@ -1,4 +1,5 @@
 import { skillList } from './data/skillList.js';
+import { AccordionArrowToggle } from './index.js';
 
 class Skills {
     static clearOtherRoot(rootId) {
@@ -57,6 +58,7 @@ export const renderSkills = () => {
         Skills.clearOtherRoot('mySkills');
         Skills.clearOtherRoot('accordionSkills');
         skillList.forEach(skill => new Skills(skill, 'accordionSkills'));
+        AccordionArrowToggle();
     }
 };
 

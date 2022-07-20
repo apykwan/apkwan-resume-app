@@ -1,4 +1,5 @@
 import { projectList } from './data/projectList.js';
+import { AccordionArrowToggle } from './index.js';
 
 class Projects {
     static clearOtherRoot(rootId) {
@@ -85,5 +86,6 @@ export const renderProjects = () => {
         Projects.clearOtherRoot('projects');
         Projects.clearOtherRoot('accordionProjects');
         projectList.forEach(proj => new Projects(proj, 'accordionProjects'));
+        AccordionArrowToggle();
     }
 };
