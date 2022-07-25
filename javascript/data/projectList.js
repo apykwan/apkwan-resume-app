@@ -10,7 +10,7 @@ export const projectList = [
         name: 'The Clothing',
         icon: 'fa-solid fa-shirt',
         link: 'https://apkwan-clothing.herokuapp.com',
-        highlights: ['React.js', 'Redux Saga', 'Node.js', 'MongoDB', 'SASS', 'Gmail login', 'Firebase database', 'Stripe credit card payment'],
+        highlights: ['React.js', 'Redux Saga', 'SASS', 'Gmail login', 'Firebase database', 'Stripe credit card payment'],
         description: 'Simulating online clothing store. Patrons may sign in with Google, add items to cart, and make payment.'
     },
     {
