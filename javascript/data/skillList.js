@@ -10,6 +10,7 @@
     { icon: "fa-solid fa-t", name: "TypeScript" },
     { icon: "fab fa-node-js", name: "Node.js" },
     { icon: "fab fa-mdb", name: "MongoDB" },
+    { icon: "fa-solid fa-database", name: "SQL" },
     { icon: "fa-solid fa-n", name: "Nginx" },
     { icon: "fab fa-docker", name: "Docker" },
     { icon: "fa-solid fa-dharmachakra", name: "Kubernetes" },
