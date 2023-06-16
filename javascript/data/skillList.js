@@ -9,6 +9,7 @@
     { icon: "fa-solid fa-flask-vial", name: "Jest" },
     { icon: "fab fa-node-js", name: "Node.js" },
     { icon: "fa-solid fa-cat", name: "Nest" },
+    { icon: "fa-brands fa-php", name: "PHP" },
     { icon: "fab fa-mdb", name: "MongoDB" },
     { icon: "fa-solid fa-database", name: "SQL" },
     { icon: "fa-solid fa-n", name: "Nginx" },
