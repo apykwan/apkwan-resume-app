@@ -62,3 +62,16 @@ $(document).on('click', '[data-toggle="lightbox"]', function (e) {
     e.preventDefault();
     $(this).ekkoLightbox();
 });
+
+
+/**
+ *  Phone Number rendering
+ */
+// Detertine if the client is in Canada
+$.getJSON('https://ipapi.co/json/', function(result) {
+  if(result.country === 'CA') {
+    $('.phone-number').text('(778) 984-6017');
+    $('.my-resume').prop('href', 'file/andypkwanResume_Van.docx')
+  } 
+});
+
