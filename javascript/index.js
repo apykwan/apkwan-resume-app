@@ -74,4 +74,3 @@ $.getJSON('https://ipapi.co/json/', function(result) {
     $('.my-resume').prop('href', 'file/andypkwanResume_Van.docx')
   } 
 });
-
