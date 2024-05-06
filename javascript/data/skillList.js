@@ -10,6 +10,7 @@
     { icon: "fa-solid fa-t", name: "TypeScript" },
     { icon: "fab fa-node-js", name: "Node.js" },
     { icon: "fa-brands fa-python", name: "Python" },
+    { icon: "fa-solid fa-pepper-hot", name: "Flask" },
     { icon: "fa-brands fa-php", name: "PHP" },
     { icon: "fab fa-mdb", name: "MongoDB" },
     { icon: "fa-solid fa-database", name: "SQL" },
